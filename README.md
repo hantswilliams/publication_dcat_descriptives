@@ -6,7 +6,7 @@ The code is written in Python and uses the pymongo library to connect to the Atl
 
 ## Notes to self: 
 - perhaps have recommended way of running this code, is using a `github space` 
-
+- should perhaps also state the code for cleaning and pulling the data from each DCAT source is not included, that this repo just focuses on the reproducibility of the results in the paper
 
 ## Step 1 - Create a virtual environment:
 - Create a virtual environment using the following command:
