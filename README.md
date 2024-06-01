@@ -4,9 +4,21 @@ This repository contains the code for the publication of the U.S. DCAT descripti
 
 The code is written in Python and uses the pymongo library to connect to the Atlas MongoDB database.
 
-## Notes to self: 
-- perhaps have recommended way of running this code, is using a `github space` 
-- should perhaps also state the code for cleaning and pulling the data from each DCAT source is not included, that this repo just focuses on the reproducibility of the results in the paper
+## About the data and scripts 
+
+The baseline list of DCAT compliant data catalogs is found in data/list_enhanced.csv 
+
+For simplicity, we have already uploaded and parsed the data from each dcat compliant source into MongoDB. The source code for this process is not included in this repository. The purpose of this repository is to provide the code for the analyses in the paper.
+
+There are two main script files included in this analysis that relate to the analyses in the paper:
+1. Descriptives: `descriptives.py`
+2. Theme translation: `theme_translation.py`
+
+The `analytics/descriptives.py` script contains the code for the analyses in the paper. The script connects to the Atlas MongoDB database and retrieves the data for the analyses. The script generates the results for the analyses in the paper.
+
+The `analytics/theme_translation.py` script contains the code for the theme translation analysis. The script connects to the Atlas MongoDB database and retrieves the data for the theme translation analysis. The script generates the results for the theme translation analysis.
+
+# Replication instructions for analysis: 
 
 ## Step 1 - Create a virtual environment:
 - Create a virtual environment using the following command:

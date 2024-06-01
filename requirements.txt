@@ -7,3 +7,5 @@ statsmodels
 ast
 python-dotenv
 statsmodels
+fuzzywuzzy
+python-Levenshtein
