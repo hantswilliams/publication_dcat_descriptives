@@ -40,11 +40,11 @@ pip install -r requirements.txt
 The results.py script requires a .env file in the root directory with the following structure:
 
 ```
-ATLAS_USERNAME = 
-ATLAS_PASSWORD = 
-ATLAS_DB_NAME = 
+ATLAS_USERNAME = researcher 
+ATLAS_PASSWORD = Dcat2024!!
+ATLAS_DB_NAME = Cluster0
 ```
 
 To connect to the Atlas MongoDB database, the script uses the pymongo library. The .env file is used to store the credentials for the database connection. The .env file should not be pushed to the repository, as it contains sensitive information.
 
-To get the credentials, please create a issue with the title "Request for MongoDB credentials" and the credentials will be provided to you.
+The provided credentials are read-only credentials to the specific db and cluster. 
