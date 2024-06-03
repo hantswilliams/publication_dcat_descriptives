@@ -4,7 +4,6 @@ pandas
 numpy
 scipy
 statsmodels
-ast
 python-dotenv
 statsmodels
 fuzzywuzzy

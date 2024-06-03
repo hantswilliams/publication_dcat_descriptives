@@ -4,6 +4,16 @@ This repository contains the code for the publication of the U.S. DCAT descripti
 
 The code is written in Python and uses the pymongo library to connect to the Atlas MongoDB database.
 
+<div>
+    <a href="https://www.loom.com/share/5ab2b726f9244ac799c40557f8157225">
+      <p>DCAT Publication: Getting Setup to Replicate Code - Watch Video</p>
+    </a>
+    <a href="https://www.loom.com/share/5ab2b726f9244ac799c40557f8157225">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/5ab2b726f9244ac799c40557f8157225-with-play.gif">
+    </a>
+  </div>
+
+
 ## About the data and scripts 
 
 The baseline list of DCAT compliant data catalogs is found in data/list_enhanced.csv 
@@ -20,7 +30,38 @@ The `analytics/theme_translation.py` script contains the code for the theme tran
 
 # Replication instructions for analysis: 
 
-## Step 1 - Create a virtual environment:
+## Using Github Spaces: 
+
+### Step 1 - Create a Github Space:
+- Create a Github Space
+    - Go into the repository and click on the "Code" button, then click on the "Spaces" tab.
+    - Click on the "Create a Space" button.
+
+### Step 2 - Create the .env file:
+- Add the following files to the space:
+    - `.env` file
+
+- Add the following secrets to the space:
+
+```
+ATLAS_USERNAME = researcher 
+ATLAS_PASSWORD = Dcat2024!!
+ATLAS_DB_NAME = Cluster0
+```
+
+### Step 3 - Install the python plugin for VS Code:
+- Install the Python plugin for VS Code.
+    - Go to the extensions tab on the left side of the screen.
+    - Search for the Python plugin and install it.
+
+### Step 4 - Open the /analytics/descriptives.py file and test the connection:
+- Open the `analytics/descriptives.py` file.
+- Highlight the first 17 lines of code, and right click on the highlighted code and select "Run Selection/Line in Python Terminal"; or press `Shift + Enter`.
+- The code will connect to the Atlas MongoDB database and retrieve the data for the analyses, you can then highlight `doc_count` and run it to see the number of documents in the collection; or type `doc_count` in the terminal and you should see approximately 142k documents.
+
+
+## Creating on your own machine: 
+### Step 1 - Create a virtual environment:
 - Create a virtual environment using the following command:
 ```
 python3 -m venv venv
@@ -34,8 +75,7 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-
-## Step 2 - .ENV file structure:
+### Step 2 - .ENV file structure:
 
 The results.py script requires a .env file in the root directory with the following structure:
 
